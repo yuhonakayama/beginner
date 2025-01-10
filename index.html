@@ -7,21 +7,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <!-- meta情報 -->
-  <title>タイトル</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <title>ExciteCode</title>
+  <meta name="description" content="ExciteCodeは、あなたの転職動機やこれまでの経験を丁寧にヒヤリングして一緒にキャリアの道筋を明確にし、キャリアアップのための転職をサーポートする会社です。" />
+  <meta name="keywords" content="ExciteCode,転職,キャリアコンサルタント" />
   <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
+  <meta property="og:title" content="ExciteCode" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://excitecode.com" />
+  <meta property="og:image" content="https://excitecode.com/img/ogp.png" />
+  <meta property="og:site_name" content="ExciteCode" />
+  <meta property="og:description" content="ExciteCodeは、あなたの転職動機やこれまでの経験を丁寧にヒヤリングして一緒にキャリアの道筋を明確にし、キャリアアップのための転職をサーポートする会社です。" />
   <meta name="twitter:card" content="summary" />
   <!-- ファビコン -->
-  <link rel="icon" href="#" />
+  <link rel="icon" href="/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 
   <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <!-- css -->
   <link rel="stylesheet" href="/css/style.css" />
@@ -32,9 +36,66 @@
 </head>
 
 <body>
-  <header class="header"></header>
+  <!-- ヘッダー -->
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__title"><img src="/images/logo.png" alt="タイトルロゴ"></div>
+        <nav class="header__nav md-none">
+          <ul class="header__items">
+            <li class="header__item">
+              <a href="#about" class="header__link">About</a>
+            </li>
+            <li class="header__item">
+              <a href="#service" class="header__link">Service</a>
+            </li>
+            <li class="header__item">
+              <a href="#news" class="header__link">News</a>
+            </li>
+            <li class="header__item">
+              <a href="#faq" class="header__link">FAQ</a>
+            </li>
+            <li class="header__item">
+              <a href="#contact" class="header__link header__contact contact-btn">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-  <main></main>
+      <!-- ハンバーガーメニュー -->
+      <div class="hamburger js-hamburger md-show">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- ドロワーメニュー -->
+        <div class="drawer-menu js-drawer">
+          <div class="drawer-menu__inner">
+            <ul class="drawer-menu__items">
+              <li class="drawer-menu__item">
+                <a href="#about" class="dawer-menu__link">About</a>
+              </li>
+              <li class="drawer-menu__item">
+                <a href="#service" class="dawer-menu__link">Service</a>
+              </li>
+              <li class="drawer-menu__item">
+                <a href="#news" class="dawer-menu__link">News</a>
+              </li>
+              <li class="drawer-menu__item">
+                <a href="#faq" class="dawer-menu__link">FAQ</a>
+              </li>
+              <li class="drawer-menu__item drawer-menu__item--contact">
+                <a href="#contact" class="dawer-menu__link contact-btn contact-btn--large">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+
+  <main>
+
+  </main>
 
   <footer class="footer"></footer>
 
