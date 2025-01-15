@@ -200,6 +200,619 @@
   font-size: 16px;
 }
 
+// メインビジュアル
+.mv {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  @include mq("lg") {
+    height: 100vh;
+  }
+}
+
+.mv__content {
+  position: absolute;
+  top: 51.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1000;
+
+  @include mq("md") {
+    top: 56%;
+  }
+}
+
+.mv__title img {
+  width: 244px;
+
+  @include mq("lg") {
+    width: 205px;
+  }
+}
+
+.mv__text {
+  font-size: 42px;
+  font-weight: $medium;
+  letter-spacing: 0.05em;
+  line-height: calc(66/42);
+  color: $white;
+  margin-top: 16px;
+
+  @include mq("md") {
+    font-size: 30px;
+    line-height: calc(42/30);
+  }
+}
+
+.mv__text--strong {
+  font-size: 60px;
+  line-height: calc(66/60);
+  color: $red;
+
+  @include mq("md") {
+    font-size: 38px;
+    line-height: calc(42/38);
+  }
+}
+
+.mv__text--large {
+  font-size: 60px;
+  line-height: calc(66/60);
+  color: $blue;
+
+  @include mq("md") {
+    font-size: 38px;
+    line-height: calc(42/38);
+  }
+}
+
+// スワイパー
+.mv__swiper {
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: inherit;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: inherit;
+}
+
+.swiper-slide picture {
+  width: 100%;
+  height: inherit;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+}
+
+// About
+.about {
+  width: 100%;
+  padding: 99px 0;
+
+  @include mq("md") {
+    padding: 97px 0;
+  }
+}
+
+.about__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.about__title.title-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.about__text {
+  margin-top: 28px;
+
+  @include mq("md") {
+    margin-top: 25px;
+  }
+}
+
+.about__img {
+  width: calc(480/1080*100%);
+  flex-shrink: 0;
+  aspect-ratio: 460/320;
+  margin-left: 30px;
+
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.about__img img {
+  width: 100%;
+  height: 100%;
+}
+
+// Service
+.service {
+  width: 100%;
+  padding: 101px 0;
+  background-color: $gray;
+}
+
+.service__inner {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include mq("md") {
+    padding: 0 15px;
+  }
+}
+
+.service__container {
+  width: 100%;
+}
+
+.service__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fit, minmax(400px, 1fr));
+  margin-top: 50px;
+
+  @include mq("md") {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    margin-top: 38px;
+  }
+}
+
+.service-item {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+
+  @include mq("md") {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+}
+
+@include mq("md") {
+  .service__item:nth-child(1) {
+    grid-row: 2 / 3;
+  }
+
+  .service__item:nth-child(2) {
+    grid-row: 1 / 2;
+  }
+}
+
+.service__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-item--text {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: $red;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 87px;
+  outline: 2px solid $white;
+  outline-offset: -6px;
+
+  @include mq("md") {
+    padding: 0 26px;
+  }
+}
+
+.service-item--text:nth-child(3) {
+  background-color: $blue;
+}
+
+.service__content {
+  color: $white;
+
+  @include mq("md") {
+    transform: translateY(-5px);
+  }
+}
+
+.service__content__title {
+  font-size: 24px;
+  font-weight: $medium;
+  letter-spacing: 0.05em;
+  text-align: center;
+
+  @include mq("md") {
+    font-size: 20px;
+  }
+}
+
+.service__content__text {
+  font-size: 15px;
+  font-weight: $medium;
+  letter-spacing: 0.05em;
+  line-height: calc(28/15);
+  text-align: left;
+  margin-top: 25px;
+
+  @include mq("md") {
+    font-size: 14px;
+    margin-top: 14px;
+    line-height: calc(30/14);
+    transform: translateY(14px);
+  }
+}
+
+// News
+.news {
+  width: 100%;
+  padding: 100px 0 160px;
+
+  @include mq("md") {
+    padding: 98px 0;
+  }
+}
+
+.news__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 35px;
+  row-gap: 30px;
+  margin-top: 50px;
+  padding: 0 12px;
+
+  @include mq("md") {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 38px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px rgba(134, 134, 134, 0.16);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 320/200;
+}
+
+.card__content {
+  margin: 12px 17px 10px 17px;
+}
+
+.card__date {
+  font-family: "Noto Sans JP";
+  font-size: 12px;
+  font-weight: $bold;
+  letter-spacing: 0.05em;
+  color: $gray2;
+
+  @include mq("md") {
+    font-weight: $medium;
+  }
+}
+
+.card__text {
+  font-size: 14px;
+  font-weight: $bold;
+  line-height: calc(26/14);
+  color: $black;
+
+  @include mq("md") {
+    font-weight: $medium;
+    margin-top: 10px;
+  }
+}
+
+// FAQ
+.faq {
+  width: 100%;
+  padding: 113px 0 0;
+  background-color: $gray;
+
+  @include mq("md") {
+    padding: 102px 0 0;
+  }
+}
+
+.faq__inner {
+  width: 100%;
+  max-width: 849px;
+  padding: 0 25px;
+  margin: 0 auto;
+
+  @include mq("md") {
+    padding: 0 15px;
+  }
+}
+
+.faq__maintitle {
+  text-transform: uppercase;
+}
+
+.faq__items {
+  margin-top: 49px;
+
+  @include mq("md") {
+    margin-top: 38px;
+  }
+}
+
+.accordion {
+  width: 100%;
+}
+
+.faq__item {
+  margin-top: 10px;
+
+  @include mq("md") {
+    margin-top: 9px;
+  }
+}
+
+.accordion-item {
+  width: 100%;
+}
+
+.faq__question {
+  position: relative;
+  width: 100%;
+  height: 63px;
+  background-color: $blue2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  cursor: pointer;
+
+  @include mq("md") {
+    height: auto;
+    padding: 17px 10px;
+  }
+}
+
+.faq__question__text {
+  color: $white;
+  font-size: 15px;
+  font-weight: $medium;
+  letter-spacing: 0.05em;
+  transform: translateY(2px);
+
+  @include mq("md") {
+    font-size: 14px;
+    line-height: calc(26/14);
+    margin-right: 37px;
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+}
+
+.faq__question::before,
+.faq__question::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background-color: $white;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+
+  @include mq("md") {
+    width: 16px;
+    top: 43%;
+    right: 12px;
+  }
+}
+
+.faq__question::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.faq__question.is-open::after {
+  transform: translateY(-50%) rotate(0);
+}
+
+// .faq__item:first-child .faq__question::after  {
+//   transform: translateY(-50%) rotate(0);
+// }
+
+.faq__answer {
+  display: none;
+  padding: 0 20px 17px;
+  margin-top: 20px;
+
+  @include mq("md") {
+    padding: 0 10px 21px;
+    margin-top: 17px;
+  }
+}
+
+.faq__item:first-child .faq__answer {
+  display: block;
+}
+
+
+.faq__answer__text {
+  font-family: "Noto Sans JP";
+  font-size: 15px;
+  font-weight: $medium;
+  letter-spacing: 0.05em;
+  line-height: calc(28/15);
+  color: $black;
+  padding-left: 1em;
+  text-indent: -1em;
+
+  @include mq("md") {
+    font-size: 14px;
+    line-height: calc(26/14);
+  }
+}
+
+.faq__img {
+  width: 100%;
+  margin-top: 100px;
+  height: 480px;
+
+  @include mq("md") {
+    margin-top: 110px;
+    height: 280px;
+  }
+}
+
+.faq__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+// Contact
+.contact {
+  width: 100%;
+  padding: 98px 0;
+}
+
+.contact__inner {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 2px;
+
+  @include mq("md") {
+    padding: 0 15px;
+  }
+}
+
+.contact__form {
+  margin-top: 50px;
+
+  @include mq("md") {
+    margin-top: 49px;
+  }
+}
+
+.form-item {
+  margin-top: 20px;
+
+  @include mq("md") {
+    margin-top: 24px;
+  }
+}
+
+.form__label {
+  font-family: "Noto Sans JP";
+  font-size: 15px;
+  font-weight: $medium;
+  color: $black;
+
+  @include mq("md") {
+    font-size: 14px;
+  }
+}
+
+.form__input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  background-color: $gray;
+  font-family: "Noto Sans JP";
+  font-size: 15px;
+  font-weight: $regular;
+  color: rgb(134, 134, 134, 0.5);
+  margin-top: 3px;
+
+  @include mq("md") {
+    height: 38px;
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
+
+.form__input--textarea {
+  height: 171px;
+  padding-top: 9px;
+
+  @include mq("md") {
+    padding-top: 11px;
+  }
+}
+
+.form__button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 43px;
+
+  @include mq("md") {
+    margin-top: 45px;
+  }
+}
+
+// フッター
+.footer {
+  width: 100%;
+  height: 80px;
+  background-color: $blue3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mq("md") {
+    height: 60px;
+  }
+}
+
+.footer__copyright {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: $regular;
+  color: $white;
+}
+
+
+
+
 
 // 共通パーツ
 .contact-btn {
@@ -214,6 +827,7 @@
   font-weight: $medium;
   letter-spacing: 0.05em;
   transition: background-color 0.3s;
+  white-space: nowrap;
 
   &:hover {
     background-color: $red2;
@@ -231,7 +845,7 @@
   }
 }
 
-.title__container {
+.title-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -262,7 +876,11 @@
 }
 
 .title__sub {
-  margin-top: 2px;
+  margin-top: 3px;
+
+  @include mq("md") {
+    margin-top: 6px;
+  }
 }
 
 .text {
@@ -274,7 +892,7 @@
   color: $black;
 
   @include mq("md") {
-    font-size: 14x;
+    font-size: 14px;
     line-height: calc(30/14);
   }
 }
@@ -286,6 +904,17 @@
   @include mq("md") {
     font-size: 20px;
     line-height: calc(38/20);
+  }
+}
+
+.inner {
+  width: 100%;
+  max-width: 1080px;
+  padding: 0 25px;
+  margin: 0 auto;
+
+  @include mq("md") {
+    padding: 0 15px;
   }
 }
 

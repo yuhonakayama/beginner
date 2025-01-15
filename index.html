@@ -27,12 +27,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- css -->
   <link rel="stylesheet" href="/css/style.css" />
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous" defer></script>
   <script src="/js/script.js" defer></script>
+
 </head>
 
 <body>
@@ -88,16 +93,253 @@
                 <a href="#contact" class="dawer-menu__link contact-btn contact-btn--large">Contact</a>
               </li>
             </ul>
-          </div>
         </div>
-      </header>
-
+      </div>
+    </header>
 
   <main>
+    <!-- メインビジュアル -->
+    <section class="mv">
+      <!-- 中央のタイトルなど -->
+      <div class="mv__content">
+        <h1 class="mv__title"><img src="/images/mv-logo.png" alt="タイトルロゴ"></h1>
+        <p class="mv__text"><span class="mv__text--strong">挑</span>戦する。<br class="md-show"><span class="mv__text--large">自</span>分を超える。</p>
+      </div>
 
+      <!-- スワイパー -->
+      <div class="swiper mv-swiper">
+        <div class="swiper-wrapper">
+          <!-- 1枚目 -->
+          <div class="swiper-slide">
+            <picture>
+              <source media="(max-width: 767px)" srcset="/images/FV-sp.jpg">
+              <img src="/images/FV-pc.jpg" alt="屋外でスマホとタブレットを持つ笑顔の女性">
+            </picture>
+          </div>
+
+          <!-- 2枚目 -->
+           <div class="swiper-slide">
+            <picture>
+              <source media="(max-width: 767px)"
+                      srcset="/images/FV2-sp.jpg">
+              <img src="/images/FV2-pc.jpg" alt="屋外で２人のスーツの男性が会話している様子">
+            </picture>
+          </div>
+
+          <!-- 3枚目 -->
+          <div class="swiper-slide">
+            <picture>
+              <source media="(max-width: 767px)"
+                      srcset="/images/FV3-sp.jpg">
+              <img src="/images/FV3-pc.jpg" alt="スマホを持った女性とタブレットを持った男性が会話をしながら屋外を歩いている様子">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="about__inner inner">
+        <div class="about__container">
+          <div class="about__title title-container">
+            <h2 class="about__maintitle title-main">About</h2>
+            <p class="about__subtitle title__sub title-sub">わたしたちについて</p>
+          </div>
+          <div class="about__content">
+            <p class="about__text text text--large">変化を恐れないで<br>挑戦し続けるあなたに寄り添う。</p>
+            <p class="about__text text">わたしたちは、あなたの転職動機やこれまでの経験を丁寧にヒヤリングして一緒にキャリアの道筋を明確にし、キャリアアップのための転職をサポートする会社です。<br>
+              あなたの転職に関する漠然とした相談に耳を傾け、必要であれば今の市場価値を示して転職活動が成功するためのお手伝いをいたします。</p>
+          </div>
+        </div>
+        <div class="about__img">
+          <img src="/images/about-img.jpg" alt="こちらを向き笑顔のスーツ姿の女性と後ろで会話をしている男性達">
+        </div>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <section class="service" id="service">
+      <div class="service__inner">
+        <div class="service__container">
+          <div class="service__title title-container">
+            <h2 class="service__maintitle title-main">Service</h2>
+            <p class="service__subtitle title__sub title-sub">サービスについて</p>
+          </div>
+          <div class="service__items">
+            <div class="service__item service-item">
+              <img src="/images/service-img1.jpg" alt="笑顔の女性コンシェルジュが相談に乗っている様子">
+            </div>
+            <div class="service__item service-item service-item--text">
+              <div class="service__content">
+                <h3 class="service__content__title">転職コンシェルジュ</h3>
+                <p class="service__content__text">各業界に精通したキャリアアドバイザーが、お客様の希望やスキルに沿った求人を厳選してご紹介いたします。保有する求人情報のうち、約80が一般には公開していない求人情報です。</p>
+              </div>
+            </div>
+            <div class="service__item service-item service-item--text">
+              <div class="service__content">
+                <h3 class="service__content__title">転職サポート</h3>
+                <p class="service__content__text">創業以来記録し続けてきた豊富なデータを元にした面接や書類作成のアドバイスをします。提出書類の添削、面接対策、独自に分析した業界・企業情報の提供など転職サポートが充実しています。</p>
+              </div>
+            </div>
+            <div class="service__item service-item">
+              <img src="/images/service-img2.jpg" alt="スーツの男性社員が転職のサポートをしている様子">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section class="news" id="news">
+      <div class="news__inner inner">
+        <div class="news__title title-container">
+          <h2 class="news__maintitle title-main">News</h2>
+          <p class="news__subtitle title__sub title-sub">お知らせ</p>
+        </div>
+        <div class="news__items">
+          <div class="news__item card">
+            <img src="/images/news-img1.jpg" alt="女性と男性が背中合わせで悩んでいる様子">
+            <div class="card__content">
+              <time class="card__date" datetime="2022-11-23">2022.11.23</time>
+              <p class="card__text">「仕事に飽きた」と感じている社会人2年目は約半数に。なぜ&quest;</p>
+            </div>
+          </div>
+          <div class="news__item card">
+            <img src="/images/news-img2.jpg" alt="女性が自宅でオンラインセミナーを受けている様子">
+            <div class="card__content">
+              <time class="card__date" datetime="2022-11-19">2022.11.19</time>
+              <p class="card__text">【これからの働き方セミナー】12月3日(土)9時～オンラインセミナー開催します&excl;</p>
+            </div>
+          </div>
+          <div class="news__item card">
+            <img src="/images/news-img3.jpg" alt="腕を組みこちらに笑顔を向ける黄色い服の女性と後ろで会話する2人の男性">
+            <div class="card__content">
+              <time class="card__date" datetime="2022-11-14">2022.11.14</time>
+              <p class="card__text">給与と興味、どちらを優先&quest;20代が転職に望むものとは&quest;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+      <div class="faq__inner">
+        <div class="faq__title title-container">
+          <h2 class="faq__maintitle title-main">faq</h2>
+          <p class="faq__subtitle title__sub title-sub">よくある質問</p>
+        </div>
+        <!-- アコーディオン -->
+        <div class="faq__items accordion js-accordion">
+          <!-- アコーディオンのアイテム -->
+          <div class="faq__item accordion-item">
+            <div class="faq__question is-open">
+              <p class="faq__question__text">Q.利用は無料ですか&quest;</p>
+            </div>
+            <div class="faq__answer is-open">
+              <p class="faq__answer__text">
+                A.ご利用いただく転職希望者には料金は一切発生いたしません。
+                ご面談、求人のご紹介、面接・選考、内定・入社まで、すべて無料でご利用いただけますのでご安心ください。</p>
+            </div>
+          </div>
+          <div class="faq__item accordion-item">
+            <div class="faq__question">
+              <p class="faq__question__text">Q.非公開求人とは何ですか&quest;</p>
+            </div>
+            <div class="faq__answer">
+              <p class="faq__answer__text">
+                A.転職サイトや企業ホームページなどのインターネット上に掲載されない求人のことです。
+                企業が非公開で採用を行いたい場合は、転職エージェントを通じて募集します。</p>
+            </div>
+          </div>
+          <div class="faq__item accordion-item">
+            <div class="faq__question">
+              <p class="faq__question__text">Q.転職時期が未定でも登録できますか&quest;</p>
+            </div>
+            <div class="faq__answer">
+              <p class="faq__answer__text">
+                A.ご登録いただけます。転職を前提にお考えの方に対しても、今の会社に残る可能性を一緒に考えることもあります。
+                現在のお悩み、キャリアのご相談や求人を見ながらご自身の優先順位を一緒に考えてみましょう。</p>
+            </div>
+          </div>
+          <div class="faq__item accordion-item">
+            <div class="faq__question">
+              <p class="faq__question__text">Q.転職活動はどんなスケジュールで進めればいいですか&quest;</p>
+            </div>
+            <div class="faq__answer">
+              <p class="faq__answer__text">
+                A.平均的な転職活動のスケジュールは、応募から内定まで1か月～1か月半、入社まで3か月ほどかかると考えておくといいでしょう。
+                会社に退職を申し出てから退職するまで1か月～1か月半が目安です。</p>
+            </div>
+          </div>
+          <div class="faq__item accordion-item">
+            <div class="faq__question">
+              <p class="faq__question__text">Q.キャリアカウンセリングはどんな内容ですか&quest;</p>
+            </div>
+            <div class="faq__answer">
+              <p class="faq__answer__text">
+                A.転職を考えたきっかけやこれまでの経歴の確認をまず行います。転職で実現したいこと、キャリアビジョンを考えていきます。キャリアカウンセリングは「面接」ではありません。
+                あなたの現状や希望の働き方など正直な気持ちをお話しください。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="faq__img">
+      <img src="/images/faq-img.jpg" alt="女性と男性が楽しそうに会話している様子">
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <div class="contact__inner">
+        <div class="contact__title title-container">
+          <h2 class="contact__maintitle title-main">Contact</h2>
+          <p class="contact__subtitle title__sub title-sub">お問い合わせ</p>
+        </div>
+
+        <div class="contact__form">
+          <form class="form" action="" method="post">
+            <ul class="form__items">
+
+              <!-- お名前 -->
+              <li class="form__item form-item">
+                <label for="name" class="form__label">お名前</label><br>
+                <input type="text" id="name" name="お名前" class="form__input" placeholder="お名前をフルネームで入力してください。" required>
+              </li>
+
+              <!-- 電話番号 -->
+              <li class="form__item form-item">
+                <label for="tel" class="form__label">電話番号</label><br>
+                <input type="tel" id="tel" name="電話番号" class="form__input" placeholder="000-0000-0000" required>
+              </li>
+
+              <!-- メールアドレス -->
+              <li class="form__item form-item">
+                <label for="email" class="form__label">メールアドレス</label><br>
+                <input type="email" id="email" name="メールアドレス" class="form__input" placeholder="ExciteCode@tenshoku.co.jp" required>
+              </li>
+
+              <!-- お問い合わせ内容 -->
+              <li class="form__item form-item">
+                <label for="message" class="form__label">お問い合わせ内容</label><br>
+                <textarea id="message" name="お問い合わせ内容" class="form__input form__input--textarea" placeholder="入力してください。" required></textarea>
+              </li>
+            </ul>
+
+            <div class="form__button">
+              <button type="submit" class="submit-btn contact-btn contact-btn--large">送信</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer"></footer>
+  <!-- フッター -->
+  <footer class="footer">
+    <small class="footer__copyright">&copy;ExciteCode&nbsp;all&nbsp;rights&nbsp;reserved</small>
+  </footer>
 
 </body>
 
